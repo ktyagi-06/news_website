@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily News App</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily News</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>📰 Daily News</h1>
-    <input type="text" id="searchInput" placeholder="Search news..." />
-    <button id="searchBtn">Search</button>
-  </header>
+    <div class="header">
+        <div class="logo">
+            <img src="newspaper-icon.png" alt="Newspaper Icon" class="newspaper-icon">
+            <h1>Daily News</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search news...">
+            <button id="search-button">Search</button>
+        </div>
+    </div>
 
-  <main id="newsContainer"></main>
+    <div class="container">
+        <h2>Local News Near You <span id="location-display"></span></h2>
+        <div id="local-news-container" class="news-grid">
+            <p id="loading-message">Fetching your location and local news...</p>
+        </div>
+    </div>
 
-  <footer>
-    <p>Powered by <a href="https://newsapi.org" target="_blank">NewsAPI.org</a></p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
